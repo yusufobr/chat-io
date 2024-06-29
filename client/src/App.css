@@ -1,0 +1,6 @@
+.multicolorGradient {
+  background-image: url('../src/assets/bg-color-gradien-multiple.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  backdrop-filter: blur(5px);
+}
