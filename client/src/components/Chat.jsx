@@ -81,13 +81,13 @@ const Chat = ({ socket, username, room, avatar, setShowChat }) => {
   return (
     <div className="container max-w-screen-md max-h-screen pt-4 pb-8 px-4 rounded-md bg-white	bg-opacity-70 backdrop-blur-sm">
       <div className="text-white mb-4 flex justify-between ">
-        <h2 className="p-1 px-3 bg-gray-400 bg-opacity-50 text-left rounded-md">Room Id : {room}</h2>
+        <h2 className="font-bold text-black p-1 px-3 text-left rounded-md bg-gradient-to-r from-pink-400 to-orange-500">Room Id : {room}</h2>
         <button className="p-1 px-3 bg-red-500 rounded-md hover:bg-red-600 capitalize" onClick={exitRoom} >exit</button>
       </div>
       <div className="w-full flex flex-col gap-4 justify-between">
         <div className="overflow-auto h-[530px]">
           {messages.map((msg, index) => (
-            <div className="grid pb-2" key={index}>
+            <div className="grid pb-2 pr-2" key={index}>
               <div
                 className={
                   msg.id !== username
@@ -138,22 +138,6 @@ const Chat = ({ socket, username, room, avatar, setShowChat }) => {
             <div className="h-8 w-8">
               <img src={avatar} className="h-8 w-8" alt="" />
             </div>
-            {/* <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width={22}
-              height={22}
-              viewBox="0 0 22 22"
-              fill="none"
-            >
-              <g id="User Circle">
-                <path
-                  id="icon"
-                  d="M6.05 17.6C6.05 15.3218 8.26619 13.475 11 13.475C13.7338 13.475 15.95 15.3218 15.95 17.6M13.475 8.525C13.475 9.89191 12.3669 11 11 11C9.6331 11 8.525 9.89191 8.525 8.525C8.525 7.1581 9.6331 6.05 11 6.05C12.3669 6.05 13.475 7.1581 13.475 8.525ZM19.25 11C19.25 15.5563 15.5563 19.25 11 19.25C6.44365 19.25 2.75 15.5563 2.75 11C2.75 6.44365 6.44365 2.75 11 2.75C15.5563 2.75 19.25 6.44365 19.25 11Z"
-                  stroke="#4F46E5"
-                  strokeWidth="1.6"
-                />
-              </g>
-            </svg> */}
             <input
               className="grow shrink basis-0 text-black bg-transparent w-3/4 text-xs font-medium leading-4 focus:outline-none"
               placeholder="Type here..."
