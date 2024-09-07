@@ -4,7 +4,7 @@ import io from "socket.io-client";
 import { useState } from "react";
 import { peg, rat, sheep, dog } from "./assets";
 
-const socket = io("http://localhost:5000");
+const socket = io("https://chat-io-e5xq.onrender.com");
 
 function App() {
   const [username, setUsername] = useState("");
