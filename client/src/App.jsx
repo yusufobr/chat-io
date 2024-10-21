@@ -6,6 +6,8 @@ import { peg, rat, sheep, dog } from "./assets";
 
 const socket = io("https://chat-io-e5xq.onrender.com");
 
+console.log(socket);
+
 function App() {
   const [username, setUsername] = useState("");
   const [room, setRoom] = useState("");
